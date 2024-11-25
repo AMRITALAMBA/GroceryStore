@@ -1,14 +1,13 @@
-/* signuplogin.css */
+/* General container for the form */
 
-/* Container for the form */
 form {
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 500px; /* Adjust width as needed */
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-in;
+    background-color: #ffffff; /* Background color similar to Cart */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow similar to Cart */
+    border: 1px solid #ddd; /* Border similar to Cart */
 }
 
 /* Form heading */
@@ -22,7 +21,7 @@ h2 {
 /* Labels for input fields */
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #555;
     font-weight: bold;
 }
@@ -41,7 +40,7 @@ input[type="password"] {
 /* Button styling */
 button[type="submit"] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Button color similar to Cart */
     color: white;
     border: none;
     padding: 15px;
@@ -52,7 +51,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Button hover color similar to Cart */
 }
 
 /* Animations */
@@ -67,3 +66,136 @@ button[type="submit"]:hover {
     }
 }
 
+/* Additional styling for a more unified look */
+.container {
+    max-width: 1200px; /* Maximum width for container */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Status Messages */
+.status-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.status-message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.725);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-overlay p {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Spinner Animation */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.admin-login {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+.btn-login {
+    padding: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}

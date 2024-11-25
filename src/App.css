@@ -1,69 +1,73 @@
-/*App.css*/
+
 .cart-items {
   border-radius: 50%;
-  background-color: rgb(20, 158, 105);
+  background-color: #28a745; /* Brighter green for better contrast */
   font-weight: 700;
-  color: aliceblue;
+  color: #fff;
   width: 30px;
   height: 30px;
-  font-size: 30px;
-  padding: 10px;
+  font-size: 16px; /* Smaller font for a better fit */
+  padding: 6px;
   top: 10px;
   position: relative;
   left: 30px;
-}
-
-.header {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
-  border-bottom: 1px sold #ccc;
-
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
 }
 
 
-/* card */
-/* client/src/components/ProductItem.css */
+
+/* Card */
 .product-card {
   border: 1px solid #ddd;
-  border-radius: 8px;
-  width: fit-content;
-  padding: 16px;
+  border-radius: 12px;
+  width: 280px;
+  padding: 20px;
   margin: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.product-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
 .product-image {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 12px;
+  border-radius: 12px;
+  margin-bottom: 16px;
   transition: transform 0.3s ease-in-out;
 }
 
 .product-image:hover {
-  transform: scale(1.1);
-  /* Enlarge the image on hover */
+  transform: scale(1.1); /* Enlarge the image on hover */
 }
 
 .product-details {
   text-align: center;
+  color: #333;
+  font-family: 'Roboto', sans-serif; /* Modern font */
 }
-
 
 .item-card {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 h2 {
   text-align: center;
+  font-family: 'Roboto', sans-serif; /* Apply modern font */
+  color: #444;
 }
 
 .filter-btn {
@@ -74,38 +78,286 @@ h2 {
   justify-content: center;
 }
 
+.filter-btn button {
+  background: linear-gradient(45deg, #56ccf2, #2f80ed); /* Gradient background */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.filter-btn button:hover {
+  background: linear-gradient(45deg, #2f80ed, #56ccf2); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.filter-btn button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Less shadow on click */
+}
+
+
 .prdt-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .cart-num {
   margin-bottom: 40px;
   cursor: pointer;
+  color: #007bff; /* Blue color for interactive elements */
 }
 
 .buy-now-btn {
-  background-color: rgb(11, 162, 11);
+  background-color: #28a745;
   color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 2rem;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 1.2rem;
   position: fixed;
-  top: 30%;
-  right: 10px;
+  top: 50%;
+  right: 20px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
 .buy-now-btn:hover {
-  background-color: rgb(113, 230, 113);
-  color: brown;
+  background-color: #218838; /* Darker green on hover */
+  color: #fff;
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .gfg {
-  background-color: green;
+  background-color: #28a745;
   color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
+.gfg:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif; /* Clean and simple font */
+  background-color: #f9f9f9; /* Light background color for a clean look */
+}
+
+/* Attractive Labels */
+label {
+  display: inline-block;
+  background-color: #4caf50; /* Fresh green background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px; /* Rounded corners for a modern look */
+  font-weight: 500; /* Medium weight for readability */
+  margin: 5px;
+  font-size: 0.9rem; /* Slightly smaller font size */
+  text-transform: uppercase; /* Uppercase text for impact */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+label:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Stylish Input Fields */
+input[type='number'], select {
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 120px; /* Suitable width */
+  font-size: 1rem; /* Clear font size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+input[type='number']:focus, select:focus {
+  border-color: #4caf50; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Green glow */
+  outline: none; /* Remove default outline */
+}
+
+/* Filter Buttons */
+button {
+  background-color: #66bb6a; /* Light green background */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  font-weight: 500; /* Medium weight */
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #4caf50; /* Darker green on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+button:active {
+  background-color: #388e3c; /* Even darker green when pressed */
+  transform: translateY(0); /* Reset lift effect */
+}
+
+/* Dropdown Select */
+select {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem; /* Clear font size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+select:focus {
+  border-color: #4caf50; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Green glow */
+}
+
+
+
+/* General header styling */
+.app-header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and actions */
+  align-items: center;
+  padding: 15px 500px;
+  background-color: #f8f9fa;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.header-logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Header actions container */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto; /* Pushes the actions to the right */
+}
+
+/* Cart and history icons container */
+.cart-history {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Action icon styling */
+.action-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  color: #343a40;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.action-icon:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Action label */
+.action-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* User menu container */
+.user-menu {
+  position: relative;
+}
+
+.user-icon {
+  color: #343a40;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.user-icon:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* User dropdown */
+.user-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+  width: 200px;
+  animation: fadeIn 0.3s ease;
+}
+
+.username {
+  padding: 15px;
+  font-weight: bold;
+  color: #343a40;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.logout-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-label {
+    display: none;
+  }
+}

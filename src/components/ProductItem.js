@@ -1,8 +1,6 @@
 // client/src/components/ProductItem.js
 import React, { useContext } from 'react';
 import { itemContext } from '../context/ItemContext';
-
-
 const ProductItem = ({ product }) => {
     const { addToCart, removeFromCart } = useContext(itemContext)
     const handleAddToCart = (product) => {
@@ -35,12 +33,7 @@ const ProductItem = ({ product }) => {
                 }>
                     Add to Cart
                 </button>
-                <button onClick={
-                    () =>
-                        handleRemoveToCart(product)
-                }>
-                    -
-                </button>
+                
             </div>
         </div>
     );

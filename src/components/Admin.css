@@ -1,0 +1,7 @@
+.admin-page{
+   background-image:url('../img/green.png');
+   height:100vh;
+}
+.admin-login{
+    background-image: linear-gradient(lightgreen,wheat);
+}
